@@ -440,6 +440,24 @@ class PagSeguro extends PagSeguroClient
     }
 
     /**
+     * Estorna uma transação.
+     *
+     * @param string $transactionCode
+     * @param float Valor a ser estornado. Até duas casas decimais separadas por ponto. Caso não seja passado, o pagseguro estorna o valor total.
+     *
+     * @return mixed
+     */
+    public function refundTransaction($transactionCode, $refundValue=null)
+    {
+        return $this->sendTransaction([
+            'email'           => $this->email,
+            'token'           => $this->token,
+            'transactionCode' => $transactionCode,
+            'refundValue' => $refundValue
+        ], $this->url['refunds']);
+    }
+
+    /**
      * Valida os dados de pagamento.
      *
      * @param array $paymentSettings

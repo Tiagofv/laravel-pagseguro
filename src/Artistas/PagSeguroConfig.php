@@ -87,16 +87,17 @@ class PagSeguroConfig
         $sandbox = $this->sandbox ? 'sandbox.' : '';
 
         $url = [
-            'preApprovalRequest'            => 'https://ws.'.$sandbox.'pagseguro.uol.com.br/v2/pre-approvals/request',
-            'preApproval'                   => 'https://ws.'.$sandbox.'pagseguro.uol.com.br/pre-approvals',
-            'preApprovalCancel'             => 'https://ws.'.$sandbox.'pagseguro.uol.com.br/v2/pre-approvals/cancel/',
-            'cancelTransaction'             => 'https://ws.'.$sandbox.'pagseguro.uol.com.br/v2/transactions/cancels',
-            'preApprovalNotifications'      => 'https://ws.'.$sandbox.'pagseguro.uol.com.br/v2/pre-approvals/notifications/',
-            'session'                       => 'https://ws.'.$sandbox.'pagseguro.uol.com.br/v2/sessions',
-            'transactions'                  => 'https://ws.'.$sandbox.'pagseguro.uol.com.br/v2/transactions',
-            'notifications'                 => 'https://ws.'.$sandbox.'pagseguro.uol.com.br/v3/transactions/notifications/',
-            'javascript'                    => 'https://stc.'.$sandbox.'pagseguro.uol.com.br/pagseguro/api/v2/checkout/pagseguro.directpayment.js',
-            'boletos'                       => 'https://ws.pagseguro.uol.com.br/recurring-payment/boletos',
+            'preApprovalRequest' => 'https://ws.' . $sandbox . 'pagseguro.uol.com.br/v2/pre-approvals/request',
+            'preApproval' => 'https://ws.' . $sandbox . 'pagseguro.uol.com.br/pre-approvals',
+            'preApprovalCancel' => 'https://ws.' . $sandbox . 'pagseguro.uol.com.br/v2/pre-approvals/cancel/',
+            'cancelTransaction' => 'https://ws.' . $sandbox . 'pagseguro.uol.com.br/v2/transactions/cancels',
+            'refunds' => 'https://ws.' . $sandbox . 'pagseguro.uol.com.br/v2/transactions/refunds',
+            'preApprovalNotifications' => 'https://ws.' . $sandbox . 'pagseguro.uol.com.br/v2/pre-approvals/notifications/',
+            'session' => 'https://ws.' . $sandbox . 'pagseguro.uol.com.br/v2/sessions',
+            'transactions' => 'https://ws.' . $sandbox . 'pagseguro.uol.com.br/v2/transactions',
+            'notifications' => 'https://ws.' . $sandbox . 'pagseguro.uol.com.br/v3/transactions/notifications/',
+            'javascript' => 'https://stc.' . $sandbox . 'pagseguro.uol.com.br/pagseguro/api/v2/checkout/pagseguro.directpayment.js',
+            'boletos' => 'https://ws.pagseguro.uol.com.br/recurring-payment/boletos',
         ];
 
         $this->url = $url;
